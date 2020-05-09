@@ -6,11 +6,15 @@
         $model = mysqli_fetch_assoc($result_model);
         ?>	
         <h1 class="text-shadow"><?=$model['name'] ?></hi>
-        <br/>
+        
         <?php
         if ($product['employee'] != 0) {
           ?>
           <div id="not-exist"><h2 style="background: red">Нема в наявностi</h2></div>
+          <?php
+        } else {
+          ?>
+          <div id="exist"><h2 style="background: green">В наявностi</h2></div>
           <?php
         }
         ?>
